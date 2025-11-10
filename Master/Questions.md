@@ -17,6 +17,8 @@
 - [ ] is contact end resistance / effective active area relevant for my thesis
       -> see Schroder2006: is more likely to be relevant for contacts formed by depositing a metal on a thin layer of a low band gap material on a higher band gap material
 
+- [ ] installation of e.g. Origin? => uni licence but not istallable through the IISB network
+
 
 
 
