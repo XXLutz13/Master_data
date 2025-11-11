@@ -7,6 +7,9 @@ __pycache__/
 *.so
 *.ini
 
+# for obsidian
+Master/.obsidian/
+
 # Distribution / packaging
 .Python
 build/
