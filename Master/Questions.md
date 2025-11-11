@@ -13,11 +13,15 @@
       https://www.researchgate.net/publication/288713900_Sputtered_germaniumsilicon_devices_for_photonics_applications
       => Yes
 - [ ] organize Ge target
+      - we need at least 150 g to evapourate
+        => email Jörg mit PSP element (Jules / Max in CC ) over 1000€ => 3 offers (websites)
+        => ask infineon first
 
 - [ ] is contact end resistance / effective active area relevant for my thesis
       -> see Schroder2006: is more likely to be relevant for contacts formed by depositing a metal on a thin layer of a low band gap material on a higher band gap material
 
-- [ ] installation of e.g. Origin? => uni licence but not istallable through the IISB network
+
+- [ ] Laser litho? für cTLM => flexiblere Struckturen => erstmal die aktuellen Masken verwenden, wenn man dann merkt wir wollen andere Strukturen testen evtl. mit Laser-Litho
 
 
 
