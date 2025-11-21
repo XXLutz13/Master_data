@@ -48,9 +48,21 @@
               "icon": "lucide-file",
               "title": "Questions"
             }
+          },
+          {
+            "id": "0575dd829eabf532",
+            "type": "leaf",
+            "state": {
+              "type": "release-notes",
+              "state": {
+                "currentVersion": "1.10.3"
+              },
+              "icon": "lucide-book-up",
+              "title": "Release Notes 1.10.3"
+            }
           }
         ],
-        "currentTab": 2
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -198,7 +210,7 @@
       "bases:Create new base": false
     }
   },
-  "active": "4abbc658e56dd235",
+  "active": "0575dd829eabf532",
   "lastOpenFiles": [
     "ToDo.md",
     "Wiki/Current equations.md",
