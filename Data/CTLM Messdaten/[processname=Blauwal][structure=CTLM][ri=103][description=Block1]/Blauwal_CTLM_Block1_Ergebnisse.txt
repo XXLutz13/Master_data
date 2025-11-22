@@ -1,0 +1,16 @@
+Lineare Regression:
+Steigung (Slope): 3.977142e-03 Ohm/μm
+Achsenabschnitt (Intercept): 4.196185e-01 Ohm
+Bestimmtheitsmaß (R²): 99.97%
+
+TLM-Werte:
+Schichtwiderstand R_sh = 2.573879464587166 Ω/□
+Kontaktwiderstand R_C = 209.81 mΩ
+Transferlänge L_T = 52.75 µm
+spezifischer Kontaktwiderstand roh_C = 7.16e-02 mΩ·cm²
+
+Parameter:
+Processname: Blauwal
+Structure: CTLM
+Ri: 103
+Description: Block1

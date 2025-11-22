@@ -1,0 +1,16 @@
+Lineare Regression:
+Steigung (Slope): 5.054137e-03 Ohm/μm
+Achsenabschnitt (Intercept): 4.512885e-01 Ohm
+Bestimmtheitsmaß (R²): 99.85%
+
+TLM-Werte:
+Schichtwiderstand R_sh = 2.44521808569983 Ω/□
+Kontaktwiderstand R_C = 225.64 mΩ
+Transferlänge L_T = 44.65 µm
+spezifischer Kontaktwiderstand roh_C = 4.87e-02 mΩ·cm²
+
+Parameter:
+Processname: Elefant
+Structure: CTLM
+Ri: 77
+Description: Block2

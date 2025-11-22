@@ -1,0 +1,16 @@
+Lineare Regression:
+Steigung (Slope): 6.184808e+01 Ohm/μm
+Achsenabschnitt (Intercept): 1.283288e+04 Ohm
+Bestimmtheitsmaß (R²): 99.56%
+
+TLM-Werte:
+Schichtwiderstand R_sh = 58290.43970119979 Ω/□
+Kontaktwiderstand R_C = 6.42 kΩ
+Transferlänge L_T = 103.75 µm
+spezifischer Kontaktwiderstand roh_C = 6.27e+03 mΩ·cm²
+
+Parameter:
+Processname: ThumExcel
+Structure: CTLM
+Ri: 150
+Description: 1_8
