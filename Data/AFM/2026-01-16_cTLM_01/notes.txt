@@ -1,0 +1,6 @@
+Area: lower right corner of the small linear TLM over the cTLM (samllest distance 15 um), first pad
+settings for CAFM are 0.5 / -0.5 V
+
+
+20251216_Strucktur_7-1_TLM_15um_02_20260116_144851_scan1 using: 5V / -0.5V
+20251216_Strucktur_7-1_TLM_15um_02_20260116_145451_scan1 using: 0.2V / -0.2V

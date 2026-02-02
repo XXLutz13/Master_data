@@ -1,0 +1,5 @@
+- max current reached (10 nA)
+- offset current? (current at 0V ?)
+
+- align using e.g. Text or align structure 
+- 

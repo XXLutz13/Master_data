@@ -1,0 +1,6 @@
+- first scan for location on sample => AC mode
+- 200 / -200 mV DC scane same position (Current did not work)
+- reentered current values and tried again
+
+
+
