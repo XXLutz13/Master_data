@@ -75,6 +75,7 @@ class TLMREADER:
                         list_of_measurements[int(os.path.splitext(os.path.basename(file))[0])] = data
                         
                     except Exception as e:
+                        # print(data)
                         print(f"Error reading file {file}: {e}")
                         continue
         
