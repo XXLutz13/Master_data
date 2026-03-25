@@ -82,6 +82,24 @@ class TLMREADER:
         return list_of_measurements
     
 
+    def get_simulation_data(self):
+        list_of_measurements = {}
+        for file in os.listdir(self.folder_path):
+            if file.endswith('.csv'):
+
+                try:
+                    data = pd.read_csv(os.path.join(self.folder_path, file), delimiter=',', header=0, encoding='ISO-8859-1')
+                    data.columns = ['Voltage', 'Current']
+                    list_of_measurements[int(os.path.splitext(os.path.basename(file))[0])] = data
+
+                except Exception as e:
+                    # print(data)
+                    print(f"Error reading file {file}: {e}")
+                    continue
+
+        return list_of_measurements
+
+
     def get_r_inner(self):
         # get r_inner from folder name => is equal in all subfolders
         match = re.search(r"\[ri=(\d+)\]", self.folder_path)
