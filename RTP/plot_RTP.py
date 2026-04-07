@@ -99,7 +99,8 @@ def read_RTP_data(file_path):
         # if col != timestamp_col:
         data[col] = pd.to_numeric(data[col], errors="coerce")
 
-    data = data.fillna(method="ffill")
+    # data = data.fillna(method="ffill")
+    data = data.ffill()
 
     # unit conversions
     data['O2 Level'] = data['O2 Level'] * 1e6
@@ -108,7 +109,7 @@ def read_RTP_data(file_path):
     return data
 
 
-file_path = r"..\Data\RTP\2Box_750C_20s_900C_120s_N2_2Vac_noRot.csv"
+file_path = r"K:\tech_stud\Hager_Lutz\VS_Code\Master_data\Data\RTP\2Box_750C_20s_900C_120s_N2_2Vac_noRot.csv"
 # file_path = r"..\Data\RTP\Process_9472_N2high_1000°C_2min.csv"
 data = read_RTP_data(file_path=file_path)
 plot_RTP_data(data)
