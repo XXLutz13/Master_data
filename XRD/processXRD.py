@@ -22,7 +22,8 @@ def baseline_als(y, lam=1e5, p=0.01, niter=10):
 def process_XRD_data(data,
                     roi: bool = False,
                     roi_start: float = 64.5,
-                    roi_end: float = 66.5):
+                    roi_end: float = 66.5,
+                    baseline_params: dict = {'lam': 1e5, 'p': 0.01, 'niter': 10},):
 
     if roi:
         # use a reagion of interest to isolate the SiC peak (64.5 - 66.5)
@@ -31,12 +32,12 @@ def process_XRD_data(data,
         tail_part = data[data['Angle'] > roi_end].copy()
 
         # process silicide part
-        silicide_part['baseline'] = baseline_als(silicide_part['Intensity'])
+        silicide_part['baseline'] = baseline_als(silicide_part['Intensity'], baseline_params['lam'], baseline_params['p'], baseline_params['niter'])
         silicide_part['corrected'] = silicide_part['Intensity'] - silicide_part['baseline']
         silicide_part['filtered'] = signal.savgol_filter(silicide_part['corrected'], 11, 3)
 
         # process tail part
-        tail_part['baseline'] = baseline_als(tail_part['Intensity'])
+        tail_part['baseline'] = baseline_als(tail_part['Intensity'], baseline_params['lam'], baseline_params['p'], baseline_params['niter'])
         tail_part['corrected'] = tail_part['Intensity'] - tail_part['baseline']
         tail_part['filtered'] = signal.savgol_filter(tail_part['corrected'], 11, 3)
 
@@ -60,12 +61,12 @@ def process_XRD_data(data,
         full_processed['log_intensity'] = np.log10(full_processed['intensity_norm'] + 1)
 
         peak_angles = full_processed.loc[all_peak_indices, 'Angle']
-        print(peak_angles)
+        # print(peak_angles)
         
     else:
         full_processed = data.copy()
         # process silicide part
-        full_processed['baseline'] = baseline_als(full_processed['Intensity'])
+        full_processed['baseline'] = baseline_als(full_processed['Intensity'], baseline_params['lam'], baseline_params['p'], baseline_params['niter'])
         full_processed['corrected'] = full_processed['Intensity'] - full_processed['baseline']
         full_processed['filtered'] = signal.savgol_filter(full_processed['corrected'], 11, 3)
 
@@ -78,7 +79,7 @@ def process_XRD_data(data,
 
 
         peak_angles = full_processed.loc[peaks_idx, 'Angle']
-        print(peak_angles)
+        # print(peak_angles)
         
 
     return full_processed, peak_angles
