@@ -23,7 +23,8 @@ def process_XRD_data(data,
                     roi: bool = False,
                     roi_start: float = 64.5,
                     roi_end: float = 66.5,
-                    baseline_params: dict = {'lam': 1e5, 'p': 0.01, 'niter': 10},):
+                    baseline_params: dict = {'lam': 1e5, 'p': 0.01, 'niter': 10},
+                    peak_params: dict = {'prominence': 0.05, 'width': 5}):
 
     if roi:
         # use a reagion of interest to isolate the SiC peak (64.5 - 66.5)
@@ -49,9 +50,9 @@ def process_XRD_data(data,
         tail_part['intensity_norm'] = tail_part['filtered'] / scale_factor
 
         # find peaks in silicide and tail parts
-        sil_peaks_idx, _ = signal.find_peaks(silicide_part['filtered'], prominence=0.05 * silicide_part['filtered'].max(), width=5)
+        sil_peaks_idx, _ = signal.find_peaks(silicide_part['filtered'], prominence=peak_params['prominence'] * silicide_part['filtered'].max(), width=peak_params['width'])
         sil_actual_indices = silicide_part.index[sil_peaks_idx]
-        tail_peaks_idx, _ = signal.find_peaks(tail_part['filtered'], prominence=0.05 * silicide_part['filtered'].max(), width=5)
+        tail_peaks_idx, _ = signal.find_peaks(tail_part['filtered'], prominence=peak_params['prominence'] * silicide_part['filtered'].max(), width=peak_params['width'])
         tail_actual_indices = tail_part.index[tail_peaks_idx]
 
         all_peak_indices = np.concatenate([sil_actual_indices, tail_actual_indices])
@@ -75,7 +76,7 @@ def process_XRD_data(data,
         full_processed['intensity_norm'] = full_processed['filtered'] / scale_factor
 
         # find peaks in silicide and tail parts
-        peaks_idx, _ = signal.find_peaks(full_processed['filtered'], prominence=0.05 * full_processed['filtered'].max(), width=5)
+        peaks_idx, _ = signal.find_peaks(full_processed['filtered'], prominence=peak_params['prominence'] * full_processed['filtered'].max(), width=peak_params['width'])
 
 
         peak_angles = full_processed.loc[peaks_idx, 'Angle']
