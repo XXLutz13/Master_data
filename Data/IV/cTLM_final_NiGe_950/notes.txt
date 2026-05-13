@@ -1,0 +1,27 @@
+NiGe-950:
+gut: Westen, Norden, 
+
+nachmessen:
+- Osten: 40, 50, 60 => sieht ganz gut aus
+- Süden-Mitte: 90, 320, 400, 480
+- Süden: 60, 70, 80
+- Norden: 100
+- Mitte: mittel => ganz neu
+
+
+-------------------------------------------
+NiSi-950
+gut: Mitte, Osten, Süden-Mitte, Süden
+
+nachmessen:
+- Mitte: 90, 240
+- Süden-Mitte, 480
+- Norden => Ganz neu
+- Westen => ganz neu
+
+-------------------------------------------
+NiSi-900
+
+nachmessen:
+- Mitte -> sehr unterschiedlich
+- Norden -> sah besser aus 
