@@ -1,0 +1,12 @@
+KPFM misst die Spannung zwischen Spitze und Oberfläche. Vereinfacht gesagt. Der Unterschied entspricht der Austrittsarbeitsdifferenz und wenn man bekannte Oberflächen hat, kann man die Austrittsarbeit der Spitze bestimmen. Umso mehr bekannte Oberflächen, desto genauer die Bestimmung. Ich verwende 3 Oberflächen, die jeweils ca. 0.5 eV Range haben. Die Spitze hatte am Tag der Messung ca. 5.3 eV (5.2 bis 5.5), deine Oberfläche mit ca. 210 mV hatte dann 5.09 eV .. die Partikel haben eher 5.05 eV .. aber die sind halt zu klein, weshalb die umliegende Fläche stärker ins Gewicht fällt. Aber das ist alles mit sehr viel Vorsicht zu interpretieren. Jeder kleinste Fehler am Setup macht die Messung unbrauchbar (schlechter elektrischer Kontakt zwischen Sample und Chuck, Oxide an Oberfläche, Wasserfilmdicke abhängig von Luftfeuchtigkeit, ...
+ 
+in der cAFM Messung sieht man halt gar nichts. Also nur die Tatsache: leitfähig und nicht isolierend .. das ist nicht gerade aussagekräftig. Evtl. noch Diodenverhalten, aber da ist eine klassische Messung mit Nadel besser
+ 
+oooder ein strukturiertes Pad und dann eine cAFM Messung über den gesamten Kontakt (3x3 um Kontakt) und dann könnte man die leitfähigen Inseln sehen
+ 
+mit normalem Tapping könnte man im Channel Phase die mechanischen Eigenschaften dieser Bereiche besser untersuchen und mit KPFM könnte man dann tatsächlich auch Aussagen darüber treffen, welche Austrittsarbeit das "neue" Material an der Oberfläche hat. Evtl. wäre Tapping --> KPFM --> cAFM an CBKR Kontakten von 3 bis 10 µm Kantenlängen Kontakten spannend. Aber ich weiß nicht, ob sich deine MA damit beschäftigt
+ 
+also das, was wir anfangs am Semilab AFM gemacht haben, aber an kleineren Kontakten, damit ein ganzer Scan darüber möglich ist
+ 
+Wie hast du die Topography Data exportiert? Mit Gwyddion oder?
+ 
